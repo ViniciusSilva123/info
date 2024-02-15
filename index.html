@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div id="bloco">
+    <p id="aviso">AVISO: USE INFORMAÇÕES FALSAS PARA TESTAR AS FUNCIONALIDADE DO SITE.</p>
+    <h1>Informações</h1>
+
+    <div class="bloco1">
+      <p>Nome:</p>
+      <p>
+        <input type="text" name="nome" id="nome" onkeydown="mudarCampo(event, 'sobrenome')"/>
+      </p>
+      <p class="error"></p>
+    </div>
+
+    <div class="bloco1">
+      <p>Sobrenome:</p>
+      <p>
+        <input type="text" name="sobrenome" id="sobrenome" onkeydown="mudarCampo(event, 'idade')"/>
+      </p>
+      <p class="error"></p>
+    </div>
+
+    <div class="bloco1">
+      <p>Idade:</p>
+      <p>
+        <input type="number" name="idade" id="idade" onkeydown="mudarCampo(event, 'nascimento')"/>
+      </p>
+      <p class="error"></p>
+    </div>
+
+    <div class="bloco1">
+      <p>Data de Nascimento:</p>
+      <p>
+        <input type="date" name="nascimento" id="nascimento" onkeydown="mudarCampo(event, 'masculino')"/>
+      </p>
+      <p class="error"></p>
+    </div>
+
+    <div class="bloco1">
+      <p>Sexo:</p>
+      <p>
+        <input type="radio" name="sexo" id="masculino" checked onkeydown="mudarCampo(event, 'email')"/>
+        <label for="masculino">Masculino</label>
+        <input type="radio" name="sexo" id="feminino"/>
+        <label for="feminino">Feminino</label>
+      </p>
+    </div>
+
+    <div class="bloco1">
+      <p>Email:</p>
+      <p>
+        <input type="text" name="email" id="email" onkeydown="mudarCampo(event, 'contato')"/>
+      </p>
+      <p class="error"></p>
+    </div>
+
+    <div class="bloco1">
+      <p>Contato:</p>
+      <p>
+        <input type="number" name="contato" id="contato" onkeydown="mudarCampo(event, 'endereco')"/>
+      </p>
+      <p class="error"></p>
+    </div>
+
+    <div class="bloco1">
+      <p>Endereço:</p>
+      <p>
+        <input type="text" name="endereco" id="endereco" onkeydown="mudarCampo(event, 'complemento')"/>
+      </p>
+      <p class="error"></p>
+    </div>
+
+    <div class="bloco1">
+      <p>Complemento:</p>
+      <p>
+        <input type="text" name="complemento" id="complemento" onkeydown="mudarCampo(event, 'botao')"/>
+      </p>
+    </div>
+
+    <input type="button" value="botao" id="botao" onclick="formatar()">
+  </div>
+  <div id="bloco">
+    <h1>Conteudo das Informações</h1>
+    <div id="conteudo">
+      <p>Nome: </p>
+      <p>Idade: </p>
+      <p>Data de Nascimento: 00/00/0000</p>
+      <p>Sexo: </p>
+      <p>Email: @gmail.com</p>
+      <p>Contato: </p>
+      <p>Endereço: </p>
+      <p>Complemento: </p>
+    </div>
+    <div id="conteudo">
+      
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
